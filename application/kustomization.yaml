@@ -1,0 +1,11 @@
+resources:
+  - namespace.yaml
+  - deployment.yaml
+  - service.yaml
+    # - configmap.yaml
+configMapGenerator:
+- name: example-config
+  namespace: example
+  #behavior: replace
+  files:
+    - config1.json
